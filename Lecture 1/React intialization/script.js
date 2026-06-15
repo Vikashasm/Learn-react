@@ -1,8 +1,15 @@
 const heading = React.createElement(
-  "h1",
-  { id: "home" },
-  "this is my heading from the react"
+  "div",
+  { id: "parent" },
+ React.createElement('div',{id:'child'},
+  [React.createElement('h1',{id:'heading'},
+    'this is my first heading'
+  ),React.createElement('h2',{id:'heading2'},'this is subheading')]
+ )
 );
+
+
+console.log(heading)
 
 const root = ReactDOM.createRoot(document.getElementById("root")).render(
   heading
